@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ajitprak/learn_mocha#readme",
   "devDependencies": {
+    "chai": "^3.2.0",
     "mocha": "^2.3.2"
   }
 }
