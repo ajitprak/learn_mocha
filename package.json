@@ -4,7 +4,7 @@
   "description": "Learning Mocha",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha && mocha --require blanket --reporter html-cov > testCoverage.html"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,14 @@
   },
   "homepage": "https://github.com/ajitprak/learn_mocha#readme",
   "devDependencies": {
+    "blanket": "^1.1.7",
     "chai": "^3.2.0",
     "mocha": "^2.3.2"
+  },
+  "config":{
+      "blanket":{
+          "pattern" : "app.js"
+          },
+      "data-cover-never":"node_modules"
   }
 }

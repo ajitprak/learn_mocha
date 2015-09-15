@@ -18,5 +18,14 @@ describe('sanitize input',function(){
 		var outputWord = app.sanitize(inputWord);
 		
 		expect(outputWord).to.equal('hello world')
-	})
+	});
+});
+
+describe('Tokenize',function(){
+    it('Returns Tokenized sentance',function(){
+            var sentence = "Lets say Hello World";
+            var sentanceArray = app.tokenize(sentence);
+            expect(sentanceArray).to.be.a('array');
+            expect(sentanceArray).to.include.members(["Lets","say","Hello","World"]);
+        });
 });
