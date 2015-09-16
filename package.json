@@ -19,12 +19,14 @@
   "devDependencies": {
     "blanket": "^1.1.7",
     "chai": "^3.2.0",
-    "mocha": "^2.3.2"
+    "mocha": "^2.3.2",
+    "sinon": "^1.16.1",
+    "sinon-chai": "^2.8.0"
   },
-  "config":{
-      "blanket":{
-          "pattern" : "app.js"
-          },
-      "data-cover-never":"node_modules"
+  "config": {
+    "blanket": {
+      "pattern": "app.js"
+    },
+    "data-cover-never": "node_modules"
   }
 }

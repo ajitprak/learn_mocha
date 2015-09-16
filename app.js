@@ -10,10 +10,10 @@ exports.tokenize = function(sentence){
 exports.info = function(callback){
     var https = require('https');
     var options = {
-        url:'api.github.com',
-        path:'/repos/sayanee/build-podcast',
+        host:'api.github.com',
+        path:'/repos/ajitprak/learn_mocha',
         method:'GET',
-        headers : {'User-Agent':'saynee'}
+        headers : {'User-Agent':'ajitprak'}
                
     };
     var str = '';
@@ -25,7 +25,14 @@ exports.info = function(callback){
             callback(JSON.parse(str));
         });
         response.on('error',function(error){
+            console.log(error);
             callback(errror);
         });
+    }).end();
+};
+
+exports.infoLang = function(infoFunc,callback){
+    infoFunc(function(reply){
+        callback("Language is "+reply.language);
     });
 };
