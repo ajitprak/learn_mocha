@@ -4,6 +4,7 @@ exports.sanitize = function(word){
 };
 
 exports.tokenize = function(sentence){
+    console.log("Tokenize function");
     return sentence.split(' ');
 };
 
@@ -35,4 +36,9 @@ exports.infoLang = function(infoFunc,callback){
     infoFunc(function(reply){
         callback("Language is "+reply.language);
     });
+};
+
+exports.testSpy = function(){
+    console.log("Our Test Spy Function Called");
+    //var arr = this.tokenize("Our Test Spy Function Called");
 };

@@ -57,3 +57,11 @@ describe('Git Info lang',function(){
 		});
 	});
 });
+
+describe("Spy testing",function(){
+    it.only('Check if tokenize is called',function(){
+        var spy = sinon.spy()
+        app.testSpy(spy);
+        expect(spy.called).to.equal(true);
+    });
+});
