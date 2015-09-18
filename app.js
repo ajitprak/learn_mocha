@@ -39,6 +39,7 @@ exports.infoLang = function(infoFunc,callback){
 };
 
 exports.testSpy = function(){
-    console.log("Our Test Spy Function Called");
-    //var arr = this.tokenize("Our Test Spy Function Called");
+    //console.log("Our Test Spy Function Called");
+    var arr = this.tokenize("Our Test Spy Function Called");
+    return "ABCD";
 };
