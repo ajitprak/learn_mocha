@@ -110,7 +110,7 @@ describe("Spy testinf testSpy",function(){
 describe("Original App flow Testing",function(){
     it.only("Test whether mock iService is called",function(done){
         var iServiceStub = sinon.stub(iService,"dbCall",function(){
-            console.log("STUBBED iService is called");
+            expect(iServiceStub.calledOnce).to.equal(true);
             done();
         });
         defaultApiManager.handler("Query");
